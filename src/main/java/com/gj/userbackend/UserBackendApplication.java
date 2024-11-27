@@ -13,11 +13,11 @@ public class UserBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserBackendApplication.class, args);
     }
-//    @Test
-//    void testDigest(){
-//        String newPassword = DigestUtils.md5DigestAsHex(("abcd"+"mypassweord").getBytes());
-//        System.out.println(newPassword);
-//    }
+    @Test
+    void testDigest(){
+        String newPassword = DigestUtils.md5DigestAsHex(("abcd"+"mypassweord").getBytes());
+        System.out.println(newPassword);
+    }
 
 
 

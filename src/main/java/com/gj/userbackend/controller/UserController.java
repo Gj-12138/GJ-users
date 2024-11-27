@@ -27,7 +27,6 @@ import static com.gj.userbackend.contant.UserConstant.USER_LOGIN_STATE;
  */
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = {"http://localhost:8081"},allowCredentials = "true")
 public class UserController {
 
     @Resource

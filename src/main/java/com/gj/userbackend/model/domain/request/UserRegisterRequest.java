@@ -33,5 +33,4 @@ public class UserRegisterRequest implements Serializable {
      */
     private String planetCode;
 
-
 }
