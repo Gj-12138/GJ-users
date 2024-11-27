@@ -17,7 +17,13 @@
       </a-col>
       <a-col flex="80px">
         <div class="user-login-status">
-          <a-button type="primary" href="/user/login"> 登录</a-button>
+          <div v-if="loginUserStore.LoginUser.id">
+            {{ loginUserStore.LoginUser.username }}
+          </div>
+          <div v-else >
+            <a-button type="primary" href="/user/login"> 登录</a-button>
+
+          </div>
         </div>
       </a-col>
     </a-row>
@@ -29,6 +35,9 @@ import { h, ref } from "vue";
 import { CrownOutlined, HomeOutlined } from "@ant-design/icons-vue";
 import { MenuProps } from "ant-design-vue";
 import { useRouter } from "vue-router";
+import { useLoginUserStore } from "../store/useLoginUserStore";
+
+const loginUserStore = useLoginUserStore();
 
 //菜单组件绑定跳转事件:
 const router = useRouter();
@@ -67,15 +76,6 @@ const items = ref<MenuProps["items"]>([
     icon: () => h(CrownOutlined),
     label: "用户管理",
     title: "用户管理",
-  },
-  {
-    key: "others",
-    label: h(
-      "a",
-      { href: "https://www.codefather.cn", target: "_blank" },
-      "编程导航"
-    ),
-    title: "编程导航",
   },
 ]);
 
