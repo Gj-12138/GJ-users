@@ -3,17 +3,28 @@
     <a-layout>
       <a-layout-header class="header">
         <GlobalHeader />
+        hearder
       </a-layout-header>
       <a-layout-content class="content">
         <router-view />
+        content
       </a-layout-content>
+
       <a-layout-footer class="footer">Footer</a-layout-footer>
     </a-layout>
   </div>
 </template>
+
 <script setup lang="ts">
 import GlobalHeader from "@/components/GlobalHeader.vue";
+import { getCurrentUser } from "@/api/user";
+
+getCurrentUser().then((res) => {
+  console.log(res);
+});
+
 </script>
+
 <style scoped>
 #basicLayout .footer {
   background-color: hotpink;

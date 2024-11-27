@@ -5,7 +5,11 @@
   <router-view />
 </template>
 
-<style></style>
+<style>
+#app {
+}
+</style>
+
 <script setup lang="ts">
-import Basiclayout from "@/ layouts/Basiclayout.vue";
+import Basiclayout from "@/layouts/Basiclayout.vue";
 </script>
