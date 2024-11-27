@@ -27,3 +27,7 @@ create table user
 DROP TABLE IF EXISTS user;
 
 INSERT INTO yupi.user (username, userAccount, avatarUrl, gender, userPassword, phone, email, userStatus, createTime, updateTime, isDelete, userRole, planetCode) VALUES ('鱼皮', 'yupi', 'https://himg.bdimg.com/sys/portraitn/item/public.1.e137c1ac.yS1WqOXfSWEasOYJ2-0pvQ', null, 'b0dd3697a192885d7c055db46155b26a', null, null, 0, '2023-08-06 14:14:22', '2023-08-06 14:39:37', 0, 1, '1');
+
+truncate table yupi.user;
+
+UPDATE yupi.user SET username = 'yupi' ;
